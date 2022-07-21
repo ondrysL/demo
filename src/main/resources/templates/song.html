@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Your Title</title>
+    <script src="https://kit.fontawesome.com/2c14dd4235.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="" th:href="@{/css/song.css}"/>
+</head>
+<body>
+
+    <h1 class="header">Choose song from your list.</h1>
+
+    <div class="container">
+
+        <a th:href="@{/api/song/{id}(id=${song.get().getId()-1})}"><i class="fa-solid fa-arrow-left-long fa-2xl" style="font-size: 60px; color: white;"></i></a>
+
+        <div class="actualSong">
+            <div>
+                <h2 class="songHeader" th:text="${song.get().getName()}"></h2>
+                <div class="songLine"></div>
+            </div>
+            <div class="containerInfo">
+                <p class="info" th:text="${song.get().getAuthor()}"></p>
+                <div class="boxContainer">
+                    <div class="box box1"></div>
+                    <div class="box box2"></div>
+                    <div class="box box3"></div>
+                    <div class="box box4"></div>
+                    <div class="box box5"></div>
+                </div>
+                <div class="audioContainer">
+                    <button id="play"><i class="fa-solid fa-play" style="font-size: 60px; color: white;"></i></button>
+                    <div class="volumeContainer">
+                        <button id="minus"><i class="fa-solid fa-minus" style="font-size: 60px; color: red;"></i></i></button>
+                        <p class="volume" id="vol"></p>
+                        <button id="plus"><i class="fa-solid fa-plus" style="font-size: 60px; color: green;"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <audio id="player" controls="controls">
+            <source src="https://docs.google.com/uc?export=download&id=18T2oLEIrknR13FjkVcoNSyZprOEByGOX">
+        </audio>
+
+
+        <a th:href="@{/api/song/{id}(id=${song.get().getId()+1})}"><i class="fa-solid fa-arrow-right-long" style="font-size: 60px; color: white;"></i></a>
+
+    </div>
+
+    <a th:href="@{/}" id="back"><i class="fa-solid fa-reply"></i></a>
+
+    <script type="text/javascript" th:src="@{/js/song.js}"></script>
+</body>
+</html>

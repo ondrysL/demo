@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/2c14dd4235.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="" th:href="@{/css/addMovie.css}"/>
+</head>
+<body>
+
+    <h1 class="header">Add movie to your list.</h1>
+
+    <div class="container">
+
+        <button class="arrow"><i class="fa-solid fa-arrow-left-long fa-2xl" style="font-size: 60px; color: white;"></i></button>
+
+        <div class="addBook">
+
+            <form th:action="@{/api/addMovie}" th:object="${movie}" method="post">
+                <h2 class="bookHeader"> Name:<input placeholder="Type here" th:field="*{name}"></h2>
+                <div class="line"></div>
+
+                <div class="innitContainer">
+                    <p class="innitInput">Director:<input class="inputBad" placeholder="Type here" th:field="*{director}"></p>
+                    <p class="innitInput">Length:<input placeholder="Type here" th:field="*{length}"></p>
+                    <p class="innitInput">Link:<input placeholder="Type here" th:field="*{link}"></p>
+                </div>
+
+                <button class="submit" type="submit">Submit</button>
+            </form>
+
+        </div>
+
+        <button class="arrow"><i class="fa-solid fa-arrow-right-long" style="font-size: 60px; color: white;"></i></button>
+
+    </div>
+
+    <a id="back" th:href="@{/api/movie/0}"><i class="fa-solid fa-reply"></i></a>
+
+</body>
+</html>

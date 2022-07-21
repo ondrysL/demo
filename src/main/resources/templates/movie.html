@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Your Title</title>
+    <script src="https://kit.fontawesome.com/2c14dd4235.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="" th:href="@{/css/movie.css}"/>
+</head>
+<body>
+
+    <h1 class="header">Choose movie from your list.</h1>
+
+    <div class="container">
+
+        <a th:href="@{/api/movie/{id}(id=${movie.get().getId()-1})}"><i class="fa-solid fa-arrow-left-long fa-2xl" style="font-size: 60px; color: white;"></i></a>
+
+            <div class="actualMovie">
+                <div>
+                    <h2 class="movieHeader" th:text="${movie.get().getName()}"></h2>
+                    <div class="movieLine"></div>
+                </div>
+                <div class="containerInfo">
+                    <p class="info" th:text="${movie.get().getDirector()}"></p>
+                    <p class="info" th:text="${movie.get().getLength()}"></p>
+                    <a class="link" th:href="${movie.get().getLink()}">Link</a>
+                </div>
+            </div>
+
+        <a th:href="@{/api/movie/{id}(id=${movie.get().getId()+1})}"><i class="fa-solid fa-arrow-right-long" style="font-size: 60px; color: white;"></i></a>
+
+    </div>
+
+    <div class="container3">
+        <button id="roll"><i class="fa-solid fa-bars"></i></button>
+        <div class="underLine1"></div>
+    </div>
+
+    <div class="container2" id="menu">
+        <div class="hambugerMenu">
+            <button id="rollBack"><i class="fa-solid fa-bars"></i></button>
+            <div class="second">
+                <a id="back" th:href="@{/}"><i class="fa-solid fa-reply"></i></a>
+                <a id="plus" th:href="@{/api/addMovie}"><i class="fa-solid fa-plus"></i></a>
+            </div>
+        </div>
+        <div class="underLine1"></div>
+    </div>
+
+    <script src="hambugerMenu.js" th:src="@{/js/hambugerMenu.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+:root{
+    --blue: #373e98;
+    --pink: #f16775;
+    --yellow: #fee36e;
+    --gray: #2a2a2a;
+    --margin-beetwen: 100px;
+    --widthBox: 500px;
+}
+
+@keyframes appearH{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+}
+
+@keyframes appearDiv{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;;
+    }
+}
+
+@keyframes pos{
+    0%{
+        opacity: 0;
+        transform: translateX(-80px);
+    }
+    90%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray);
+    font-family: Helvetica, sans-serif;
+}
+
+.header{
+    color: white;
+    text-align: center;
+    font-size: 7.5ch;
+    margin-bottom: 80px;
+    animation: appearH 10s linear;
+}
+
+button{
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    animation: appearH 10s linear;
+}
+
+.actualMovie{
+    width: var(--widthBox);
+    height: 500px;
+    border-radius: 25px;
+    border: solid 5px var(--pink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.movieHeader{
+    color: white;
+    text-align: center;
+    font-size: 3.8ch;
+}
+
+.movieLine{
+    height: 5px;
+    width: var(--widthBox);
+    background-color: var(--pink);
+}
+
+.containerInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 75px;
+}
+
+.info{
+    color: white;
+    font-size: 3.8ch;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.link{
+    color: white;
+    font-size: 3.8ch;
+    font-weight: 600;
+    margin: 20px;
+}
+
+#back{
+    font-size: 40px;
+    color: white;
+    transition: ease-in-out 0.5s;
+}
+
+#back:hover{
+    color: var(--pink);
+    transform: scale(1.2);
+    transition: ease-in-out 0.5s;
+}
+
+#plus{
+    font-size: 40px;
+    color: white;
+    transition: ease-in-out 0.5s;
+}
+
+#plus:hover{
+    color: var(--pink);
+    transform: scale(1.2);
+    transition: ease-in-out 0.5s;
+}
+
+.container2{
+    margin-left: 50px;
+    align-self: flex-start;
+    display: none;
+}
+
+.second{
+    animation: pos 0.5s linear;
+    display: flex;
+}
+
+.second a{
+    margin-right: 30px;
+}
+
+.hambugerMenu{
+    padding: 25px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.hambugerMenu button{
+    margin-right: 30px;
+}
+
+.container3{
+    margin-left: 50px;
+    align-self: flex-start;
+}
+
+.underLine1{
+    background-color: var(--pink);
+    height: 2px;
+    width: 10%;
+    transition: all 1s ease-in-out;
+}
+
+.container3:hover .underLine1{
+    width: 100%;
+    transition: all 1s ease-in;
+}
+
+.container2:hover .underLine1{
+    width: 100%;
+    transition: all 1s ease-in;
+}
+
+#roll{
+    padding: 25px;
+    font-size: 40px;
+    color: white;
+    transition: ease-in-out 0.5s;
+}
+
+#roll:hover{
+    color: var(--pink);
+    transform: scale(1.2);
+    transition: ease-in-out 0.5s;
+}
+
+#rollBack{
+    font-size: 40px;
+    color: white;
+}
+
+#rollBack:hover{
+    color: var(--pink);
+    transform: scale(1.2);
+    transition: ease-in-out 0.5s;
+}

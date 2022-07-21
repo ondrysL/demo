@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Your Title</title>
+    <script src="https://kit.fontawesome.com/2c14dd4235.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="" th:href="@{/css/book.css}"/>
+</head>
+<body>
+
+    <h1 class="header">Choose book from your list.</h1>
+
+
+    <div class="container">
+
+        <a th:href="@{/api/book/{id}(id=${book.get().getId()-1})}"><i class="fa-solid fa-arrow-left-long fa-2xl" style="font-size: 60px; color: white;"></i></a>
+
+        <div class="actualBook">
+            <div>
+                <h2 class="bookHeader" th:text="${book.get().getName()}"></h2>
+                <div class="bookLine"></div>
+            </div>
+            <div class="containerInfo">
+                <p class="site"th:text="${book.get().getAuthor()}"></p>
+                <p class="site" th:text="${book.get().getSite()} + ' sites'"></p>
+                <a class="link" th:href="${book.get().getLink()}">Link</a>
+            </div>
+        </div>
+
+        <a th:href="@{/api/book/{id}(id=${book.get().getId()+1})}"><i class="fa-solid fa-arrow-right-long" style="font-size: 60px; color: white;"></i></a>
+
+    </div>
+
+    <div class="container3">
+        <button id="roll"><i class="fa-solid fa-bars"></i></button>
+        <div class="underLine1"></div>
+    </div>
+
+    <div class="container2" id="menu">
+        <div class="hambugerMenu">
+            <button id="rollBack"><i class="fa-solid fa-bars"></i></button>
+            <div class="second">
+                <a id="back" th:href="@{/}"><i class="fa-solid fa-reply"></i></a>
+                <a id="plus" th:href="@{/api/addBook}"><i class="fa-solid fa-plus"></i></a>
+            </div>
+        </div>
+        <div class="underLine1"></div>
+    </div>
+
+    <script src="hambugerMenu.js" th:src="@{/js/hambugerMenu.js}"></script>
+
+</body>
+</html>

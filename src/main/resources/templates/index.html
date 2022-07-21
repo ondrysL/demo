@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Your Title</title>
+    <link rel="stylesheet" href="" th:href="@{/css/style.css}"/>
+</head>
+<body>
+
+<h1>What are you going to do?</h1>
+
+<div class="container">
+
+    <!--Container for book-->
+    <div class="books">
+        <div>
+            <h2 class="divHeader">Read a book</h2>
+            <div class="divLine"></div>
+        </div>
+
+        <div class="colorBook">
+            <a th:href="@{/api/book/0}" class="colorP">Read</a>
+        </div>
+    </div>
+    <!--Container for book-->
+
+    <!--Container for movie-->
+    <div class="movies">
+
+        <div>
+            <h2 class="divHeader">Watch a film</h2>
+            <div class="divLine"></div>
+        </div>
+
+        <div class="colorMovie">
+            <a th:href="@{/api/movie/0}" class="colorP">Watch</a>
+        </div>
+
+    </div>
+    <!--Container for movie-->
+
+    <!--Container for songs-->
+    <div class="songs">
+
+        <div>
+            <h2 class="divHeader">Listen a song</h2>
+            <div class="divLine"></div>
+        </div>
+
+        <div class="colorSong">
+            <a th:href="@{/api/song/0}" class="colorP">Listen</a>
+        </div>
+
+    </div>
+    <!--Container for songs-->
+
+</div>
+
+</body>
+</html>

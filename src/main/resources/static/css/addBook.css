@@ -1,0 +1,135 @@
+:root{
+    --blue: #373e98;
+    --pink: #f16775;
+    --yellow: #fee36e;
+    --gray: #2a2a2a;
+    --margin-beetwen: 100px;
+    --widthBox: 500px;
+    --margin-bottom: 50px;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray);
+    font-family: Helvetica, sans-serif;
+}
+
+.header{
+    color: white;
+    text-align: center;
+    font-size: 7.5ch;
+    margin-bottom: 80px;
+}
+
+.arrow{
+    padding: 0;
+    height: 25px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#back{
+    padding: 0px;
+    margin: 0px;
+    font-size: 40px;
+    color: white;
+    align-self: flex-start;
+    margin-left: 50px;
+    transition: ease-in-out 0.5s;
+}
+
+#back:hover{
+    color: var(--yellow);
+    transform: scale(1.4);
+    transition: ease-in-out 0.5s;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    animation: appearH 10s linear;
+}
+
+.addBook{
+    height: 550px;
+    width: var(--widthBox);
+    border-radius: 25px;
+    border: solid 5px var(--yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.line{
+    height: 5px;
+    width: var(--widthBox);
+    background-color: var(--yellow);
+}
+
+.bookHeader{
+    color: white;
+    text-align: center;
+    font-size: 3.8ch;
+}
+
+.innitContainer{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 280px;
+}
+
+.innitInput{
+    color: white;
+    font-size: 3.8ch;
+    font-weight: 600;
+    margin: 20px;
+}
+
+input{
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5ch;
+    width: 200px;
+    margin-left: 40px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.submit{
+    margin-top: 20px;
+    padding: 10px;
+    height: 80px;
+    width: 150px;
+    font-size: 3ch;
+    font-weight: 600;
+    color: white;
+    border: solid var(--yellow) 4px;
+    border-radius: 25px;
+    background: none;
+    cursor: pointer;
+    transition: ease-in-out 0.5s;
+}
+
+.submit:hover{
+    background-color: #fee36e;
+    transform: scale(1.1);
+    transition: ease-in-out 0.5s;
+}

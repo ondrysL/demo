@@ -1,0 +1,237 @@
+:root{
+    --blue: #373e98;
+    --pink: #f16775;
+    --yellow: #fee36e;
+    --gray: #2a2a2a;
+    --margin-beetwen: 100px;
+    --widthBox: 500px;
+    --margin-bottom: 50px;
+}
+
+@keyframes appearH{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+}
+
+@keyframes appearDiv{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;;
+    }
+}
+
+/*-----------*/
+@keyframes quiet {
+    25%{
+        transform: scaleY(.6);
+    }
+    50%{
+        transform: scaleY(.4);
+    }
+    75%{
+        transform: scaleY(.8);
+    }
+}
+
+@keyframes normal {
+    25%{
+        transform: scaleY(1);
+    }
+    50%{
+        transform: scaleY(.4);
+    }
+    75%{
+        transform: scaleY(.6);
+    }
+}
+@keyframes loud {
+    25%{
+        transform: scaleY(1);
+    }
+    50%{
+        transform: scaleY(.4);
+    }
+    75%{
+        transform: scaleY(1.2);
+    }
+}
+/*-----------*/
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gray);
+    font-family: Helvetica, sans-serif;
+}
+
+.header{
+    color: white;
+    text-align: center;
+    font-size: 7.5ch;
+    margin-bottom: 80px;
+    animation: appearH 10s linear;
+}
+
+button{
+    padding: 0;
+    height: 25px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+#back{
+    padding: 0px;
+    margin: 0px;
+    font-size: 40px;
+    color: white;
+    align-self: flex-start;
+    margin-left: 50px;
+    transition: ease-in-out 0.5s;
+}
+
+#back:hover{
+    color: var(--blue);
+    transform: scale(1.4);
+    transition: ease-in-out 0.5s;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    animation: appearH 10s linear;
+}
+
+.actualSong{
+    height: 500px;
+    width: var(--widthBox);
+    border-radius: 25px;
+    border: solid 5px var(--blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.songHeader{
+    color: white;
+    text-align: center;
+    font-size: 3.8ch;
+}
+
+.songLine{
+    height: 5px;
+    width: var(--widthBox);
+    background-color: var(--blue);
+}
+
+.containerInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 75px;
+}
+
+.info{
+    color: white;
+    font-size: 3.8ch;
+    font-weight: 600;
+    margin: var(--margin-bottom);
+}
+
+#player{
+    display: none;
+}
+
+.audioContainer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+}
+
+.volumeContainer{
+    margin-left: 150px;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.volume{
+    font-size: 5ch;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+}
+
+.fa-play{
+    transition: ease-in-out 0.5s;
+}
+
+.fa-play:hover{
+    color: var(--blue);
+    transform: scale(1.2);
+    transition: ease-in-out 0.5s;
+}
+
+/*-------*/
+.boxContainer{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    --boxSize: 8px;
+    --gutter: 4px;
+    width: calc((var(--boxSize) + var(--gutter)) * 5);
+    margin-bottom: var(--margin-bottom);
+}
+
+.box{
+    transform: scaleY(.4);
+    height: 100%;
+    width: var(--boxSize);
+    background: var(--blue);
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    border-radius: 8px;
+    animation-play-state: paused;
+}
+
+.box1{
+    animation-name: quiet;
+}
+
+.box2{
+    animation-name: normal;
+}
+
+.box3{
+    animation-name: quiet;
+}
+
+.box4{
+    animation-name: loud;
+}
+
+.box5{
+    animation-name: quiet;
+}
+
+/*-----------*/

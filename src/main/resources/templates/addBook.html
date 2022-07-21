@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/2c14dd4235.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="" th:href="@{/css/addBook.css}"/>
+</head>
+<body>
+
+    <h1 class="header">Add book to your list.</h1>
+
+    <div class="container">
+
+      <button class="arrow"><i class="fa-solid fa-arrow-left-long fa-2xl" style="font-size: 60px; color: white;"></i></button>
+
+      <div class="addBook">
+
+        <form th:action="@{/api/addBook}" th:object="${book}" method="post">
+          <h2 class="bookHeader"> Name:<input placeholder="Type here" th:field="*{name}"></h2>
+          <div class="line"></div>
+
+          <div class="innitContainer">
+            <p class="innitInput">Author:<input class="inputBad" placeholder="Type here" th:field="*{author}"></p>
+            <p class="innitInput">Sites:<input placeholder='Type here' th:field="*{site}"></p>
+            <p class="innitInput">Link:<input placeholder="Type here" th:field="*{link}"></p>
+          </div>
+
+          <button class="submit" type="submit">Submit</button>
+        </form>
+
+      </div>
+
+      <button class="arrow"><i class="fa-solid fa-arrow-right-long" style="font-size: 60px; color: white;"></i></button>
+
+    </div>
+
+    <a id="back" th:href="@{/api/book/0}"><i class="fa-solid fa-reply"></i></a>
+
+</body>
+</html>
